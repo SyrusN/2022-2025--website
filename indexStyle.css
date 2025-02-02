@@ -1,0 +1,256 @@
+/*############## Defaults ###############*/
+nav,
+header,
+footer {
+    display: block;
+}
+
+body {
+    line-height: 1;
+    margin: 0;
+    background-color: #ddebfe;
+}
+
+.img {
+    max-width: 100%;
+    height: auto;
+    padding: 5px;
+}
+
+
+/*############## Nav bar ##############*/
+
+nav {
+    width: 100%;
+    margin: 0;
+}
+
+nav ul {
+    background-color: #666;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0px 1.2px 2px 0px #071cff;
+}
+
+ul.topnav li {
+    list-style: none;
+    float: left;
+
+}
+
+ul.topnav li.topnav-right {
+    float: right;
+}
+
+ul.topnav li a {
+    font-family: "Quantico";
+    display: block;
+    text-decoration: none;
+    min-height: 1.2rem;
+    text-align: center;
+    padding: 0.9rem;
+    text-transform: uppercase;
+    color: white;
+    transition: 0.3s;
+}
+
+ul.topnav li a:hover {
+    background-color: white;
+    color: #005eff;
+}
+
+ul.topnav li.dropdownIcon {
+    display: none;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #404040;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    width: 9.1rem;
+    z-index: 1;
+}
+
+ul.topnav li.dropdownPhoto:hover {
+    background-color: #005eff;
+}
+
+.dropdownPhoto:hover .dropdown-content {
+    display: block;
+}
+
+/*############ Main Content ################*/
+.mainContent {
+    font-family: "Comfortaa";
+    padding-bottom: 10%;
+}
+
+.mainContent h1 {
+    padding-left: 15%;
+    padding-right: 30%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    text-shadow: 2px 1.4px #1e70ff;
+    padding-top: 1rem;
+    line-height: 2.1rem;
+}
+
+.mainContent p {
+    color: black;
+    padding-left: 15%;
+    padding-right: 30%;
+    line-height: 1.25rem;
+}
+
+ul.topnav li a {
+    font-size: 1rem;
+}
+
+.error404 {
+    text-shadow: 2px 2px #005eff;
+    padding-left: 1%;
+}
+
+.singleLink {
+    color: black;
+    padding-left: 15%;
+    padding-right: 15%;
+    line-height: 1.25rem;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.frontImage {
+    aspect-ratio: 25 / 10;
+    width: 60%;
+    height: 30%;
+    padding-left: 15%;
+    box-sizing: border-box;
+    transition: transform .2s;
+}
+
+div.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #666;
+    color: white;
+    padding-left: 0.3%;
+    padding-top: 0.2%;
+    height: 1.3rem;
+    text-align: left;
+    box-shadow: 0px 3px 14px 0px #005eff;
+    font-family: "Quantico";
+}
+
+/*############# Mobile #############*/
+@media screen and (max-device-width: 600px) {
+    ul.topnav li:not(:nth-child(1)) {
+        display: none;
+    }
+
+    .frontImage {
+        resize: both;
+        width: 100%;
+    }
+
+    .mainContent h1 {
+        padding-right: 15%;
+        line-height: 4rem;
+        font-size: 3rem;
+    }
+
+    ul.topnav li a {
+        font-size: 2.9rem;
+    }
+
+    .singleLink {
+        font-size: 2.1rem;
+        line-height: 2.6rem;
+    }
+
+    .mainContent p {
+        padding-right: 15%;
+        line-height: 3rem;
+        font-size: 1.8rem;
+    }
+
+    ul.topnav li.dropdownIcon {
+        display: block;
+        float: right;
+    }
+
+    ul.topnav.responsive li.dropdownIcon {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    ul.topnav.responsive {
+        position: relative;
+    }
+
+    ul.topnav.responsive li {
+        display: inline;
+        float: none;
+    }
+
+    ul.topnav.responsive li a {
+        display: block;
+        text-align: left;
+        background-color: #666;
+        color: white;
+        transition: 0.3s;
+    }
+
+    ul.topnav.responsive li.dropdownPhoto {
+        display: block;
+        text-align: left;
+        background-color: #666;
+        color: white;
+        transition: 0.3s;
+    }
+
+    nav ul.responsive {
+        overflow: visible;
+    }
+
+    nav ul.topnav.responsive li.dropdownPhoto div.dropdown-content a {
+        background-color: #404040;
+        width: 654%;
+        z-index: 0;
+    }
+
+    nav ul.topnav.responsive li.dropdownPhoto div.dropdown-content a:hover {
+        background-color: white;
+        color: #005eff;
+    }
+
+    ul.topnav.responsive li a:hover {
+        background-color: white;
+        color: #005eff;
+    }
+
+    .frontImage {
+        padding-left: 15.2%;
+        padding-right: 15.3%;
+    }
+
+    div.footer {
+        height: 2.5rem;
+        font-size: 1.8rem;
+        padding-top: 0.5%;
+        padding-left: 0.5%;
+    }
+}
