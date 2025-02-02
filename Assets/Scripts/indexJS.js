@@ -1,9 +1,13 @@
 function dropdownMenu() {
-    var x = document.getElementById("dropdownClick");
-    if (x.className === "topnav") {
-        x.className += " responsive";
+    var buttons = document.getElementById("dropdownClick");
+    if (buttons.className === "topnav" || buttons.className === "right-topnav") {
+        buttons.className += " responsive";
         /*changes topnav to topnav.responsive*/
     } else {
-        x.className = "topnav";
+        if (buttons.className === "right-topnav responsive") {
+            buttons.className = "right-topnav";
+        } else {
+            buttons.className = "topnav";
+        }
     }
 }

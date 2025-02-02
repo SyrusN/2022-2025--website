@@ -25,43 +25,75 @@ nav {
     margin: 0;
 }
 
-nav ul {
-    background-color: #666;
+.topnav {
+    overflow: hidden; 
+    display:flex; 
+    background-color: #b0ddff;
+    box-shadow: 0px 1.2px 2px 0px #7faeff;
+    display: -webkit-flex;
+    justify-content:space-between;
+    -webkit-justify-content:space-between;
+    width:100%;
+}
+
+
+
+nav.topnav ul {
     overflow: hidden;
     margin: 0;
     padding: 0;
-    box-shadow: 0px 1.2px 2px 0px #071cff;
+    padding-left: 6rem;
+    list-style-type: none;
+    width: 100%;
 }
 
-ul.topnav li {
+nav.topnav ul li {
     list-style: none;
     float: left;
-
+    border-width: 1.4px;
+    margin-top: 0.2rem;
+    margin-bottom: 0rem;
+    margin-left: 0.5rem;
+    border-radius: 22px;
 }
 
-ul.topnav li.topnav-right {
-    float: right;
+nav.topnav ul div.right-topnav {
+    display: -webkit-flex;
+    float:right;
+    padding-right: 4rem;
 }
 
-ul.topnav li a {
-    font-family: "Quantico";
+
+nav.topnav ul li a {
+    font-family: "Comfortaa";
     display: block;
     text-decoration: none;
-    min-height: 1.2rem;
+    min-height: 0.5rem;
     text-align: center;
-    padding: 0.9rem;
-    text-transform: uppercase;
-    color: white;
-    transition: 0.3s;
+    padding: 0.8rem;
+    /* text-transform: uppercase; */
+    color: rgb(6, 68, 255);
+    transition: 0.4s;
 }
 
-ul.topnav li a:hover {
+nav.topnav ul li a:hover {
     background-color: white;
     color: #005eff;
+    border-style: solid;
+    border-color: #7c89ff;
+    background-color: rgb(255, 255, 255);
+    border-width: 1.4px;
+    /* margin-right: 0.5rem;
+    margin-left: 0.2rem; */
+    margin-bottom: 0.3rem;
+    margin-top: 0.2rem;
+    border-radius: 25px;
 }
 
-ul.topnav li.dropdownIcon {
+nav.topnav ul li.dropdownIcon {
     display: none;
+    margin-right: 0.5rem;
+    width: 6rem;
 }
 
 .dropdown-content {
@@ -73,27 +105,21 @@ ul.topnav li.dropdownIcon {
     z-index: 1;
 }
 
-ul.topnav li.dropdownPhoto:hover {
-    background-color: #005eff;
-}
-
-.dropdownPhoto:hover .dropdown-content {
-    display: block;
-}
-
 /*############ Main Content ################*/
 .mainContent {
     font-family: "Comfortaa";
+    margin-left: 5rem;
+    margin-right: 5rem;
+    padding-left: 0rem;
     padding-bottom: 10%;
 }
 
 .mainContent h1 {
     padding-left: 15%;
     padding-right: 30%;
-    padding-top: 1%;
-    padding-bottom: 1%;
+    /* padding-bottom: 1%; */
     text-shadow: 2px 1.4px #1e70ff;
-    padding-top: 1rem;
+    padding-top: 0.7rem;
     line-height: 2.1rem;
 }
 
@@ -104,8 +130,9 @@ ul.topnav li.dropdownPhoto:hover {
     line-height: 1.25rem;
 }
 
-ul.topnav li a {
+nav.topnav ul li a {
     font-size: 1rem;
+    margin-trim: 3rem;
 }
 
 .error404 {
@@ -144,20 +171,32 @@ div.footer {
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: #666;
-    color: white;
-    padding-left: 0.3%;
-    padding-top: 0.2%;
-    height: 1.3rem;
+    background-color: #a8d3f4;
+    color: rgb(54, 54, 54);
+    padding-left: 0.4%;
+    padding-top: 0.3%;
+    height: 1.1rem;
     text-align: left;
     box-shadow: 0px 3px 14px 0px #005eff;
-    font-family: "Quantico";
+    font-family: "Poiret One";
+    font-weight: 900;
+    font-size: 0.8rem;
+    font-stretch: expanded;
 }
 
 /*############# Mobile #############*/
 @media screen and (max-device-width: 600px) {
-    ul.topnav li:not(:nth-child(1)) {
+    nav.topnav ul li:not(:nth-child(1)) {
         display: none;
+
+    }
+    nav.topnav ul div.right-topnav li:not(:nth-child(3)){
+        display: none;
+
+    }
+
+    .mainContent {
+        padding-left: 1rem;
     }
 
     .frontImage {
@@ -171,7 +210,7 @@ div.footer {
         font-size: 3rem;
     }
 
-    ul.topnav li a {
+    nav.topnav ul li a {
         font-size: 2.9rem;
     }
 
@@ -186,60 +225,89 @@ div.footer {
         font-size: 1.8rem;
     }
 
-    ul.topnav li.dropdownIcon {
-        display: block;
+    nav.topnav ul li.dropdownIcon {
+        display: grid;
         float: right;
     }
 
-    ul.topnav.responsive li.dropdownIcon {
+    nav.topnav.responsive li.dropdownIcon {
         position: absolute;
         top: 0;
         right: 0;
+
     }
 
-    ul.topnav.responsive {
+
+    nav.topnav ul {
+        display:table;
+        clear:both;
         position: relative;
+        padding-left: 0rem;
+        float:left;
     }
 
-    ul.topnav.responsive li {
-        display: inline;
-        float: none;
+    nav.topnav ul div.right-topnav {
+        display:grid;
+        float:right;
+        padding-right: 0rem;
     }
-
-    ul.topnav.responsive li a {
+    
+    nav.topnav.responsive ul {
+        display:grid;
+        padding-left: 0rem;
+        border: 25px;
+        float:left;
+    }
+    nav.topnav.responsive ul li {
+        display:block;
+        
+        -webkit-justify-content:space-evenly;
+        border: 25px;
+        float:left;
+    }
+    nav.topnav.responsive ul div.right-topnav li {
         display: block;
+        justify-content:space-evenly;
+        -webkit-justify-content:space-evenly;
+        border: 25px;
+        padding-right: 0rem;
+        float:left;
+    }
+
+
+    nav.topnav.responsive ul li a {
         text-align: left;
-        background-color: #666;
+        background-color: #b0ddff;
         color: white;
+        border-radius: 20px;
         transition: 0.3s;
     }
 
-    ul.topnav.responsive li.dropdownPhoto {
+    nav.topnav.responsive ul.right-topnav li a {
         display: block;
         text-align: left;
-        background-color: #666;
+        background-color: #b0ddff;
         color: white;
+        border-radius: 20px;
         transition: 0.3s;
     }
 
-    nav ul.responsive {
-        overflow: visible;
+
+    nav.topnav.responsive ul {
+        overflow:scroll;
     }
 
-    nav ul.topnav.responsive li.dropdownPhoto div.dropdown-content a {
-        background-color: #404040;
-        width: 654%;
-        z-index: 0;
-    }
 
-    nav ul.topnav.responsive li.dropdownPhoto div.dropdown-content a:hover {
+
+    nav.topnav.responsive ul li a:hover {
         background-color: white;
         color: #005eff;
+        border-radius: 25px;
     }
-
-    ul.topnav.responsive li a:hover {
+    nav.topnav.responsive ul.right-topnav li a:hover {
         background-color: white;
         color: #005eff;
+        border-radius: 25px;
     }
 
     .frontImage {
@@ -251,6 +319,6 @@ div.footer {
         height: 2.5rem;
         font-size: 1.8rem;
         padding-top: 0.5%;
-        padding-left: 0.5%;
+        padding-left: 1.5%;
     }
 }
