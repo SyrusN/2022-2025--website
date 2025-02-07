@@ -42,7 +42,7 @@ nav.topnav ul {
     overflow: hidden;
     margin: 0;
     padding: 0;
-    padding-left: 6rem;
+    padding-left: 5rem;
     list-style-type: none;
     width: 100%;
 }
@@ -316,9 +316,9 @@ div.footer {
     }
 
     div.footer {
-        height: 2.5rem;
-        font-size: 1.8rem;
-        padding-top: 0.5%;
+        height: 2rem;
+        font-size: 1.7rem;
+        padding-top: 0.8%;
         padding-left: 1.5%;
     }
 }
